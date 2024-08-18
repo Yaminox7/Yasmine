@@ -1,0 +1,30 @@
+:root {
+    --font-family: Arial, Helvetica, sans-serif;
+
+    --hover-bg: rgba(192, 111, 111, 0.8);
+    --bg: rgba(111, 192, 111, 0.4);
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+legend {
+    font-weight: bold;
+}
+
+fieldset {
+    /* border: ; */
+    background: var(--bg);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+    transition: .3s all;
+    cursor: pointer;
+}
+
+fieldset:hover {
+    background: var(--hover-bg);
+}
+
+#selected {
+    background: blue;
+}
