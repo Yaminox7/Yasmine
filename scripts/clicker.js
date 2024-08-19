@@ -1,16 +1,35 @@
-Array.from(document.getElementsByClassName("card")).forEach((card) => {
-    card.onclick = () => {
-        console.log(card)
-    };
-})
+import { removeItemFrom, addItemToW } from "./functions.js"
 
-// function effect(e) {
-//   for (const card of document.getElementsByClassName("card")) {
-//     const rect = card.getBoundingClientRect(),
-//       x = e.clientX - rect.left,
-//       y = e.clientY - rect.top;
+var ip; 
+async function fetchUserIP() {
+    try {
+        let response = await fetch('https://api.ipify.org?format=json');
+        let data = await response.json();
+        ip = data.ip;
+    } catch (error) {
+        console.error('Error fetching IP address:', error);
+    }
+}
 
-//     card.style.setProperty("--mouse-x", `${x}px`);
-//     card.style.setProperty("--mouse-y", `${y}px`);
-//   }
-// }
+var cards = document.getElementsByClassName("card");
+fetchUserIP().then(() => {
+    Array.from(cards).forEach((card) => {
+        card.onclick = () => {
+            var index = Array.from(cards).indexOf(card);
+            if (card.id == "selected") {
+                card.id = "";
+                localStorage.removeItem("selected");
+                removeItemFrom(index, ip);
+            } else {
+                var selected = document.getElementById("selected");
+                if (selected) {
+                    selected.id = "";
+                }
+        
+                card.id = "selected";
+                localStorage.setItem("selected", index);
+                addItemToW(index, ip);
+            }
+        };
+    });
+});

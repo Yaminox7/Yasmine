@@ -14,6 +14,7 @@
 }
 
 body {
+    user-select: none;
     animation: background-pan 10s linear infinite;
     background: linear-gradient(
         to right,
@@ -54,7 +55,7 @@ body.toggled > #tiles > .tile:hover {
     height: calc(100vh - 1px);
     width: calc(100vw - 1px);
     position: absolute;
-    z-index: 1;
+    z-index: 0;
     
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
