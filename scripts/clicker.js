@@ -11,11 +11,11 @@ import { removeItemFrom, addItemToW } from "./functions.js"
 //     }
 // }
 
-var id = localStorage.getItem("name") + "_" + localStorage.getItem("fname");
 var cards = document.getElementsByClassName("card");
 Array.from(cards).forEach((card) => {
-// fetchUserIP().then(() => {
+    // fetchUserIP().then(() => {
     card.onclick = () => {
+        var id = localStorage.getItem("name") + "_" + localStorage.getItem("fname");
         var index = Array.from(cards).indexOf(card);
         var input = card.getElementsByTagName("input")[0];
         if (card.id == "selected") {
