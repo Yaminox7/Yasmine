@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Statistiques</title>
+        <link rel="icon" href="images/pie.svg">
+        <link rel="stylesheet" href="stats.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Statistiques</h1>
+            
+            <div class="table-container">
+                <h2>Table de données</h2>
+                <table id="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Nombre de votes</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div class="chart-container">
+                <h2>Graphique</h2>
+                <canvas id="data-chart"></canvas>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="scripts/variables.js"></script>
+        <!-- <script src="scripts/creator.js"></script> -->
+        <script src="scripts/functions.js" type="module"></script>
+        <script src="scripts/graph.js"></script>
+        <script src="scripts/reader.js" type="module"></script>
+    </body>
+</html>

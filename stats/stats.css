@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(200, 200, 200);
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #333;
+    margin: 5px;
+}
+
+.table-container, .chart-container {
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9)
+}
