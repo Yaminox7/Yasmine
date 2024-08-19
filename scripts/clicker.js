@@ -10,30 +10,31 @@ import { removeItemFrom, addItemToW } from "./functions.js"
 //         console.error('Error fetching IP address:', error);
 //     }
 // }
-
 var cards = document.getElementsByClassName("card");
-Array.from(cards).forEach((card) => {
+function setter() {
     // fetchUserIP().then(() => {
-    card.onclick = () => {
-        var id = localStorage.getItem("name") + "_" + localStorage.getItem("fname");
-        var index = Array.from(cards).indexOf(card);
-        var input = card.getElementsByTagName("input")[0];
-        if (card.id == "selected") {
-            card.id = "";
-            localStorage.removeItem("selected");
-            removeItemFrom(index, id);
-            input.checked = false; 
-        } else {
-            var selected = document.getElementById("selected");
-            if (selected) {
-                selected.id = "";
+    Array.from(cards).forEach((card) => {
+        card.onclick = () => {
+            var id = localStorage.getItem("name") + "_" + localStorage.getItem("fname");
+            var index = Array.from(cards).indexOf(card);
+            var input = card.getElementsByTagName("input")[0];
+            if (card.id == "selected") {
+                card.id = "";
+                localStorage.removeItem("selected");
+                removeItemFrom(index, id);
+                input.checked = false; 
+            } else {
+                var selected = document.getElementById("selected");
+                if (selected) {
+                    selected.id = "";
+                }
+                
+                card.id = "selected";
+                input.checked = true; 
+                localStorage.setItem("selected", index);
+                addItemToW(index, id);
             }
-            
-            card.id = "selected";
-            input.checked = true; 
-            localStorage.setItem("selected", index);
-            addItemToW(index, id);
-        }
-    };
-});
-// });
+        };
+    });
+    // });}
+}
