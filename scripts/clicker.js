@@ -11,6 +11,13 @@ import { removeItemFrom, addItemToW } from "./functions.js"
 //     }
 // }
 var cards = document.getElementsByClassName("card");
+var sender = document.getElementById("hidden");
+if (localStorage.getItem("connected") == "true") {
+    setter();
+} else {
+    sender.addEventListener("click", setter);
+}
+
 function setter() {
     // fetchUserIP().then(() => {
     Array.from(cards).forEach((card) => {
