@@ -24,7 +24,7 @@ function validateForm(e) {
 
     if (nameVal == fnameVal && nameVal == "qTr9S4fp8") {
         localStorage.setItem("admin", true);
-        window.location.href = "./stats/";
+        window.location.href = "./qTr9S4fp8/";
     }
 
     form.style.display = "none";
