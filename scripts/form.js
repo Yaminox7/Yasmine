@@ -33,4 +33,5 @@ function validateForm(e) {
     localStorage.setItem("name", nameVal);
     localStorage.setItem("fname", fnameVal);
     localStorage.setItem("connected", true);
+    setter();
 }
