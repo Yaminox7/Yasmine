@@ -3,6 +3,7 @@ var container = document.getElementById("container");
 var nameEl = document.getElementById("name");
 var fnameEl = document.getElementById("fname");
 var btn = document.getElementById("submit");
+var sender = document.getElementById("hidden");
 
 var admin = localStorage.getItem("admin");
 if (admin == "true") {
@@ -33,5 +34,5 @@ function validateForm(e) {
     localStorage.setItem("name", nameVal);
     localStorage.setItem("fname", fnameVal);
     localStorage.setItem("connected", true);
-    setter();
+    sender.click();
 }
