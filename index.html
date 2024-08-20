@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vote</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/form.css">
+        <link rel="stylesheet" href="styles/cards.css">
+        <link rel="icon" href="images/logo.svg">
+    </head>
+    <body>
+        <div id="signin"> 
+            <div id="content"> 
+                <h2>Se connecter</h2> 
+                <form id="form"> 
+                    <div class="inputBox"> 
+                        <input type="text" minlength="4" maxlength="30" required id="name" placeholder=" "> <i>Nom</i> 
+                    </div> 
+                    <div class="inputBox"> 
+                        <input type="text" minlength="4" maxlength="30" required id="fname" placeholder=" "> <i>Prénom</i> 
+                    </div> 
+                    <div class="inputBox"> 
+                        <input type="submit" value="Se connecter" id="submit"> 
+                    </div> 
+                </form> 
+            </div> 
+        </div> 
+        <div id="container">
+            <div id="cards"></div>
+        </div>
+        <button id="hidden" style="display: none;"></button>
+        <script src="scripts/variables.js"></script>
+        <script src="scripts/functions.js" type="module"></script>
+        <script src="scripts/loader.js"></script>
+        <script src="scripts/hover.js"></script>
+        <script src="scripts/clicker.js" type="module"></script>
+        <script src="scripts/form.js"></script>
+    </body>
+</html>
