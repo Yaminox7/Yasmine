@@ -5,7 +5,9 @@ const appSettings = {
     databaseURL: "https://database-3573b-default-rtdb.europe-west1.firebasedatabase.app/"
 }
 
-const app = initializeApp(appSettings);
+const app = initializeApp({
+    databaseURL: '%DB_URL%';
+});
 const database = getDatabase(app);
 var opinionCollection = ref(database, "opinions/");
 
