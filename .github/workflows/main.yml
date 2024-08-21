@@ -23,7 +23,7 @@ jobs:
 
       - name: Replace environment variables in JavaScript
         run: |
-          sed -i 's|%DB_URL%|${{ secrets.DB_URL }}|g' public/scripts/functions.js
+          sed -i 's|%DB_URL%|${{ secrets.DB_URL }}|g' scripts/functions.js
 
       - name: Build project
         run: npm run build
