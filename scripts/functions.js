@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, push, onValue, remove, set, update, child, get } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 
 const appConfig = {
-    databaseURL: '%DB_URL%'
+    databaseURL: "https://database-3573b-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 console.log(appConfig);
 
