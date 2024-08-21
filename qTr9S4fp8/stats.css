@@ -1,0 +1,133 @@
+:root {
+    --popup-width-big: 750px;
+    --popup-width-normal: 500px;
+    --popup-width-small: 300px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(200, 200, 200);
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    user-select: none;
+    width: calc(100% - 40px);
+}
+
+.container {
+    width: 100%;
+    /* max-width: 1200px; */
+}
+
+h1, h2 {
+    color: #333;
+    margin: 5px;
+}
+
+.table-container, .chart-container {
+    margin-bottom: 40px;
+}
+
+.chart-container {
+    max-height: 800px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    user-select: text;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    background: rgba(0, 0, 0, 0.6);
+    font-weight: normal;
+    color: rgba(255, 255, 255, 0.7)
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.9)
+}
+
+#logs {
+    flex-basis: 100%;
+    margin-bottom: 10px;
+}
+
+#popups {
+    display: flex;
+    flex-wrap: wrap;
+    display: grid;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.popup {
+    background: rgb(20, 20, 20);
+    width: var(--popup-width-big);
+    text-align: left;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.time-start {
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.time-stamp {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 992px) {
+    .popup {
+        width: var(--popup-width-normal);
+        padding: 7px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .popup {
+        width: var(--popup-width-small);
+        padding: 5px 10px;
+    }
+}
+
+#empty {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-style: italic;
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+}
+
+#stats {
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+}
