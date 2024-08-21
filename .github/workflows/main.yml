@@ -16,3 +16,6 @@ jobs:
       - name: Replace environment variables in JavaScript
         run: |
           sed -i 's|%DB_URL%|${{ secrets.DB_URL }}|g' scripts/functions.js
+
+      - name: Show secret
+        run: echo ${{ secrets.DB_URL }}
